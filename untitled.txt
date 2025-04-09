@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <h2>Enter Weather Parameters</h2>
+    <form method="POST" action="/predict">
+        Dew Point: <input type="text" name="dew_point"><br>
+        Wind Speed: <input type="text" name="wind_speed"><br>
+        Wind Direction: <input type="text" name="wind_dir"><br>
+        Temperature: <input type="text" name="temp"><br>
+        Cloud Cover: <input type="text" name="cloud"><br>
+        Sea Level Pressure: <input type="text" name="pressure"><br>
+        Wind Gust: <input type="text" name="gust"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
